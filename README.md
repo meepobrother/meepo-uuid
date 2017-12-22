@@ -2,7 +2,17 @@
 
 
 ```ts
-import { UuidService } from '../../src/app/app';
+import { UuidModule } from 'meepo-uuid';
+@NgModule({
+  imports: [
+    UuidModule.forRoot()
+  ]
+})
+export class AppModule { }
+```
+
+```ts
+import { UuidService } from 'meepo-uuid';
 export class AppComponent implements OnInit {
   namespace: string = this.uuid.v1();
   constructor(
