@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { VersionnComponent } from './version';
-
-@NgModule({
-    declarations: [
-        VersionnComponent
-    ],
-    imports: [ CommonModule ],
-    exports: [],
-    providers: [],
-})
-export class AppModule {}
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { UuidService } from './uuid';
+@NgModule({})
+export class UuidModule {
+    public static forRoot(): ModuleWithProviders{
+        return {
+            ngModule: UuidModule,
+            providers: [
+                UuidService
+            ]
+        }
+    }
+}
+export { UuidService } from './uuid';

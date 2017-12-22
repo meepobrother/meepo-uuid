@@ -112,6 +112,11 @@ let globals = {
     'rxjs/operators/takeUntil': 'Rx.Observable.prototype',
     'rxjs/operators/throttleTime': 'Rx.Observable.prototype',
     'rxjs/operators/tap': 'Rx.Observable.prototype',
+
+    'uuid': 'v4',
+    'uuid/v1': 'v1',
+    'uuid/v4': 'v4',
+    'uuid/v5': 'v5'
 };
 
 let plugins = [
