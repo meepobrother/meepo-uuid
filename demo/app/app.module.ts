@@ -8,7 +8,7 @@ import { UuidModule } from '../../src/app/app';
   ],
   imports: [
     BrowserModule,
-    UuidModule.forRoot()
+    UuidModule
   ],
   providers: [],
   bootstrap: [AppComponent]

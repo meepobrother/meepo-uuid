@@ -24,7 +24,7 @@
     ],
     "angularCompilerOptions": {
         "annotateForClosureCompiler": true,
-        "strictMetadataEmit": true,
+        "strictMetadataEmit": false,
         "flatModuleOutFile": "index.js",
         "flatModuleId": "meepo-uuid",
         "skipTemplateCodegen": true
