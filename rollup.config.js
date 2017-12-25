@@ -138,7 +138,7 @@ switch (target) {
 
 export default {
     exports: 'named',
-    name: 'ngZorro.antd',
+    name: 'meepo-uuid',
     plugins,
     external: Object.keys(globals),
     globals,
