@@ -7,8 +7,10 @@ const v1 = require('uuid/v1');
 @Injectable()
 export class UuidService {
     namespace: string = '';
+    time: any = new Date().getTime();
     constructor() {
         this.namespace = v1();
+        console.log('uuid service',this.time);
     }
 
     v1(): string {
