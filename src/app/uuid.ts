@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-declare const require: any;
-
 @Injectable()
 export class UuidService {
     constructor() { }
