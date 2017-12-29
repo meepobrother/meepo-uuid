@@ -1,39 +1,13 @@
 import { Injectable } from '@angular/core';
 declare const require: any;
-const v1 = require('uuid/v1');
-// const v4 = require('uuid/v4');
-// const v5 = require('uuid/v5');
 
 @Injectable()
 export class UuidService {
-    namespace: string = '';
-    time: any = new Date().getTime();
-    constructor() {
-        this.namespace = v1();
-        console.log('uuid service',this.time);
-    }
-
+    constructor() { }
     v1(): string {
-        return v1();
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
     }
-
-    // v4(): string {
-    //     return v4();
-    // }
-
-    // v5URL(s: string) {
-    //     return v5(s, v5.DNS);
-    // }
-
-    // v5DNS(s: string) {
-    //     return v5(s, v5.DNS);
-    // }
-
-    // v5(s: string) {
-    //     return v5(s, this.namespace);
-    // }
-
-    // v5Name(s: string, namespace: string) {
-    //     return v5(s, namespace);
-    // }
 }
